@@ -26,6 +26,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.m7yun.m7yun_flutter_upgrade'
+    }
     compileSdkVersion 31
 
     compileOptions {
